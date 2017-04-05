@@ -40,6 +40,22 @@ require("url-loader?prefix=img/!./file.png");
 // => Parameters for the file-loader are valid too
 //    They are passed to the file-loader if used.
 ```
+Use with webpack 2 like this
+
+```js
+module: {
+  rules: [
+    {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader',
+        options: {
+            limit: 10000,
+            mimetype: 'application/font-woff'
+        }
+    }
+  ]
+}
+```
 
 <h2 align="center">Contributing</h2>
 
